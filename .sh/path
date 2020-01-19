@@ -1,4 +1,6 @@
 #!/bin/sh
 [ -d "$HOME"/.scripts ] && \
 	PATH="$PATH:$HOME/.scripts"
+[ -d "$HOME"/.cargon/bin ] && \
+	PATH="$HOME/.cargo/bin:$PATH"
 export PATH
