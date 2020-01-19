@@ -1,5 +1,3 @@
 #!/bin/sh
 alias g='$EDITOR $TODO'
-alias gb='$EDITOR $OLD_TODO'
-alias gt='grep ^o $TODO'
 alias ls="ls --classify"
