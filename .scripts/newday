@@ -1,0 +1,3 @@
+#!/bin/sh
+sed 's/^o/ /' "$TODO" >> "$OLD_TODO"
+date +%F > "$TODO"

@@ -1,0 +1,32 @@
+super + w
+	$BROWSER
+super + semicolon
+	$LOCKER
+super + shift + Return
+	$XTERMINAL
+super + c
+	color_to_clip
+super + p
+	sh -c $RUNNER
+super + shift + p
+	rofi-pass
+super + shift + m
+	sad-playlist
+super + e
+	emoji_to_clip
+Print
+	import -window root "$HOME/Pictures/screenshot/$(date +%F-%T)_screenshot.png"
+ctrl + Print
+	import "$HOME/Pictures/screenshot/$(date +%F-%T)_screenshot.png"
+XF86MonBrightnessDown
+	xbacklight -dec 5
+XF86MonBrightnessUp
+	xbacklight -inc 5
+XF86AudioRaiseVolume
+	amixer sset 'Master' 5%+ ; xsetroot -name "$(genstatus)"
+XF86AudioLowerVolume
+	amixer sset 'Master' 5%- ; xsetroot -name "$(genstatus)"
+XF86AudioMute
+	amixer sset 'Master' toggle ; xsetroot -name "$(genstatus)"
+ctrl + alt + Delete
+	pkill Xorg

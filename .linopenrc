@@ -1,0 +1,14 @@
+video:ffplay
+audio:ffplay
+image:feh
+text:$EDITOR->interm
+
+.xls:libreoffice
+.docx:libreoffice
+.pdf:mupdf
+.html:$BROWSER
+.mp3:ffplay
+
+directory:nnn->interm
+
+default:echo

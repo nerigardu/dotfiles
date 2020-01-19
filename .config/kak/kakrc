@@ -1,0 +1,12 @@
+set-option global tabstop 8
+set-option global indentwidth 0
+set-option global disabled_hooks .*-indent
+
+hook global BufSetOption filetype=python %{
+	set-option buffer tabstop 4
+	set-option buffer indentwidth 4
+	hook -group tabspaces buffer InsertChar \t %{ execute-keys -draft h@ }
+	hook -group tabspaces buffer InsertDelete ' ' %{ try %{
+		execute-keys -draft 'hGh<a-k>\A\h+\z<ret>gii<tab><esc><lt>h@'
+	}}
+}
