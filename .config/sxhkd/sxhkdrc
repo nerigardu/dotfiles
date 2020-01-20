@@ -10,8 +10,6 @@ super + p
 	sh -c $RUNNER
 super + shift + p
 	rofi-pass
-super + shift + m
-	sad-playlist
 super + e
 	emoji_to_clip
 Print

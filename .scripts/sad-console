@@ -1,2 +1,0 @@
-#!/bin/sh
-socat UNIX:/tmp/sad-sock -

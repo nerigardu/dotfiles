@@ -3,6 +3,6 @@ sxhkd &
 "$HOME"/.fehbg &
 while : ; do
 	xsetroot -name "$(genstatus)"
-	sleep 30
+	sleep 2
 done &
 exec dwm
