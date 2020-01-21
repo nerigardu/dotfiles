@@ -1,18 +1,22 @@
 #!/bin/sh
-link_file_in_folder() {
+
+TMP_FILE="$(mktemp)"
+
+files_in_folder() {
 	folder=$1
-	for file in $(find "$folder" -maxdepth 1 -not -type d -not -name "install.sh") ; do
-		base="${file#./}"
-		link "$(pwd)/$base" "$HOME/$base"
-	done
+	find "$folder" -maxdepth 1 -not -type d -not -name "install.sh" >> "$TMP_FILE"
 }
 
-link_folder_in_folder() {
+folders_in_folder() {
 	folder=$1
-	for subfolder in $(find "$folder" -maxdepth 1 -type d -not \( -name ".config" -o -name "." -o -name ".git" \) ) ; do
-		base="${subfolder#./}"
+	find "$folder" -maxdepth 1 -type d -not \( -name ".config" -o -name "." -o -name ".git" \) >> "$TMP_FILE"
+}
+
+link_dots() {
+	while IFS= read -r file ; do
+		base="${file#./}"
 		link "$(pwd)/$base" "$HOME/$base"
-	done
+	done < "$TMP_FILE"
 }
 
 link() {
@@ -26,7 +30,11 @@ link() {
 	fi
 }
 
-link_file_in_folder .
-link_folder_in_folder .
-link_file_in_folder .config
-link_folder_in_folder .config
+# populate $TMP_FILE with links to make
+files_in_folder .
+folders_in_folder .
+files_in_folder .config
+folders_in_folder .config
+
+# make links unless file already exists
+link_dots

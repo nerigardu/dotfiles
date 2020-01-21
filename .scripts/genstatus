@@ -1,5 +1,5 @@
 #!/bin/sh
 AUDIO="$(amixer get 'Master' | tail -n 1 | tr ' ' '\n' | tail -n 2 | tr '\n' ' ' | sed 's/ $/\n/')"
 BATTERY="$(acpi | awk -F ',' '{print $2}')"
-TIME="$(date +'%F %R')"
+TIME="$(date +'%F %T')"
 printf " A: %s | B: %s | T: %s " "$AUDIO" "$BATTERY" "$TIME"

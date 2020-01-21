@@ -9,4 +9,5 @@ hook global BufSetOption filetype=python %{
 	hook -group tabspaces buffer InsertDelete ' ' %{ try %{
 		execute-keys -draft 'hGh<a-k>\A\h+\z<ret>gii<tab><esc><lt>h@'
 	}}
+	map buffer user f ':info %sh{ flake8 $kak_buffile }<ret>' -docstring 'flake8'
 }
