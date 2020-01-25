@@ -11,3 +11,5 @@ hook global BufSetOption filetype=python %{
 	}}
 	map buffer user f ':info %sh{ flake8 $kak_buffile }<ret>' -docstring 'flake8'
 }
+
+colorscheme my-colorscheme
