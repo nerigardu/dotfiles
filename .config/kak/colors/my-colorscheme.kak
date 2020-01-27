@@ -43,7 +43,7 @@ echo "
 
 echo "
 	face global Default rgb:cccccc,rgb:000000
-	face global PrimarySelection rgb:000000,${sec1}
+	face global PrimarySelection rgb:000000,${sec3}
 	face global SecondarySelection rgb:121212,rgb:ababab
 	face global PrimaryCursor rgb:000000,rgb:ffffff+b
 	face global SecondaryCursor rgb:121212,rgb:dedede+b
@@ -56,7 +56,7 @@ echo "
 	face global MenuForeground rgb:000000,${hlt2}
 	face global MenuBackground default,rgb:333333
 	face global MenuInfo default,rgb:545454
-	face global Information rgb:000000,${sec1}
+	face global Information rgb:000000,${sec2}
 	face global Error rgb:121212,rgb:dedede
 	face global StatusLine rgb:cccccc,rgb:212121
 	face global StatusLineMode rgb:000000,${hlt2}
@@ -64,6 +64,6 @@ echo "
 	face global StatusLineValue rgb:ffffff,rgb:454545
         face global PrimaryCursorEol black,${hlt1}+fg
 	face global StatusCursor default,rgb:787878
-	face global Prompt rgb:000000,${sec1}
+	face global Prompt rgb:000000,${sec2}
 "
 }
