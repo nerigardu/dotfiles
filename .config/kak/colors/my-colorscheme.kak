@@ -28,8 +28,8 @@ echo "
 # text
 
 echo "
-	face global title rgb:ffffff,default+b
-	face global header rgb:ffffff,default
+	face global title ${hlt3},default+b
+	face global header ${hlt1},default
 	face global bold rgb:ffffff,default+b
 	face global italic rgb:ededed,default+i
 	face global mono rgb:cccccc,rgb:212121
