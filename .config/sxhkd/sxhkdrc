@@ -21,10 +21,10 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
 	xbacklight -inc 5
 XF86AudioRaiseVolume
-	amixer sset 'Master' 5%+ ; xsetroot -name "$(genstatus)"
+	amixer sset 'Master' 5%+
 XF86AudioLowerVolume
-	amixer sset 'Master' 5%- ; xsetroot -name "$(genstatus)"
+	amixer sset 'Master' 5%-
 XF86AudioMute
-	amixer sset 'Master' toggle ; xsetroot -name "$(genstatus)"
+	amixer sset 'Master' toggle
 ctrl + alt + Delete
 	pkill Xorg
