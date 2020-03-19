@@ -1,3 +1,4 @@
 #!/bin/sh
-alias g='$EDITOR $TODO'
-alias ls="ls --classify -v"
+alias g='$EDITOR'
+alias gg='$EDITOR $TODO'
+alias ls="ls -v --color"

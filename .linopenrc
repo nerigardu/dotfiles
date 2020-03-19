@@ -1,2 +1,8 @@
 .pdf:mupdf
+.html:firefox-nightly
+.docx:libreoffice
+.xlsx:libreoffice
+.xls:libreoffice
+image:feh
+
 default:echo

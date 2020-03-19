@@ -1,6 +1,10 @@
 #!/bin/sh
 [ -d "$HOME"/.scripts ] && \
 	PATH="$PATH:$HOME/.scripts"
-[ -d "$HOME"/.cargon/bin ] && \
+[ -d "$HOME"/.cargo/bin ] && \
 	PATH="$HOME/.cargo/bin:$PATH"
+[ -d /opt/wine-osu/bin ] && \
+	PATH="/opt/wine-osu/bin:$PATH"
+[ -d "$HOME"/bin ] && \
+	PATH="$PATH:$HOME/bin"
 export PATH

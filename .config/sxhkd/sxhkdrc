@@ -2,16 +2,20 @@ super + w
 	$BROWSER
 super + semicolon
 	$LOCKER
-super + shift + Return
-	$XTERMINAL
-super + c
+super + Return
+	sh -c "$XTERMINAL"
+super + z
 	color_to_clip
 super + p
 	sh -c $RUNNER
+super + shift + w
+	rofi -show window
 super + shift + p
 	rofi-pass
 super + e
 	emoji_to_clip
+super + s
+	genstatus | rofi -dmenu -lines 3 > /dev/null
 Print
 	import -window root "$HOME/Pictures/screenshot/$(date +%F-%T)_screenshot.png"
 ctrl + Print
@@ -27,4 +31,6 @@ XF86AudioLowerVolume
 XF86AudioMute
 	amixer sset 'Master' toggle
 ctrl + alt + Delete
+	pkill Xorg
+super + shift + q
 	pkill Xorg

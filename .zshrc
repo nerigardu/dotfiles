@@ -19,4 +19,4 @@ bindkey "^R" history-incremental-pattern-search-backward
 [ -d "$HOME"/.sh/ ] && for file in $(ls "$HOME"/.sh/) ; do
 	. "$HOME"/.sh/"$file"
 done
-PS1='%~ %# '
+PS1='%1~ %f%# '
