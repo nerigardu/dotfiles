@@ -22,7 +22,7 @@ link_dots() {
 link() {
 	src=$1
 	dest=$2
-	if [ -d "$dest" ] || [ -f "$dest" ] ; then
+	if [ -d "$dest" ] || [ -f "$dest" ]; then
 		printf "%s already exists\n" "$dest"
 	else
 		printf "%s -> %s\n" "$src" "$dest"

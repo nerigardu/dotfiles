@@ -16,6 +16,10 @@ super + e
 	emoji_to_clip
 super + s
 	genstatus | rofi -dmenu -lines 3 > /dev/null
+super + o
+	xclip -o -sel c | meme_case | xclip -i -sel c
+super + d
+	date +%F | tr -d '\n' | xclip -i -sel c
 Print
 	import -window root "$HOME/Pictures/screenshot/$(date +%F-%T)_screenshot.png"
 ctrl + Print
@@ -34,3 +38,5 @@ ctrl + alt + Delete
 	pkill Xorg
 super + shift + q
 	pkill Xorg
+super + shift + r
+	pkill -SIGUSR1 sxhkd

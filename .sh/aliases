@@ -1,4 +1,5 @@
 #!/bin/sh
 alias g='$EDITOR'
 alias gg='$EDITOR $TODO'
-alias ls="ls -v --color"
+alias gj='$EDITOR $JOURNAL'
+alias ls='ls -v --color'
