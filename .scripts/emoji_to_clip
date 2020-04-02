@@ -1,2 +1,2 @@
 #!/bin/sh
-rofi -dmenu < "$HOME"/.emoji | cut -d ' ' -f 1 | xclip -i -sel c
+rofi -dmenu < "$HOME"/.config/emoji | cut -d ' ' -f 1 | xclip -i -sel c

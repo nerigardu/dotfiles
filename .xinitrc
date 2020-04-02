@@ -1,6 +1,6 @@
 #!/bin/sh
-"$HOME"/.fehbg &
-setxkbmap -option "ctrl:nocaps"
+xwallpaper --daemon --zoom ~/Pictures/wallpaper/rubik_melt.jpg &
+setxkbmap -option "ctrl:nocaps" &
 sxhkd &
 xsetroot -cursor_name "left_ptr" &
 #while : ; do

@@ -1,4 +1,4 @@
-super + w
+uper + w
 	$BROWSER
 super + semicolon
 	$LOCKER
@@ -16,10 +16,14 @@ super + e
 	emoji_to_clip
 super + s
 	genstatus | rofi -dmenu -lines 3 > /dev/null
-super + o
-	xclip -o -sel c | meme_case | xclip -i -sel c
-super + d
+super + o ; o
+	xclip -o -sel c | clip_to_memecase | xclip -i -sel c
+super + o ; m
+	clip_to_mpv
+super + o ; d
 	date +%F | tr -d '\n' | xclip -i -sel c
+super + o ; q
+	clip_to_qr
 Print
 	import -window root "$HOME/Pictures/screenshot/$(date +%F-%T)_screenshot.png"
 ctrl + Print

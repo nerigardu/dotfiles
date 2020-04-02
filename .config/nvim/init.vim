@@ -35,6 +35,7 @@ set inccommand=split
 set ignorecase smartcase
 set tildeop
 set wrap linebreak nolist
+set statusline &vim
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set number relativenumber
 set foldmethod=marker

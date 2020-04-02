@@ -1,0 +1,3 @@
+#!/bin/sh
+url="$(xclip -o -sel c)"
+mpv "$url"

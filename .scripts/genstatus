@@ -2,4 +2,4 @@
 AUDIO="$(amixer get 'Master' | tail -n 1 | tr ' ' '\n' | tail -n 2 | tr '\n' ' ' | sed 's/ $/\n/')"
 BATTERY="$(acpi | awk -F ',' '{print $2}')"
 TIME="$(date +'%F %T')"
-printf "A: %s\nB: %s\nT: %s\n" "$AUDIO" "$BATTERY" "$TIME"
+printf "🔈: %s\n🔋: %s\n🕒: %s\n" "$AUDIO" "$BATTERY" "$TIME"
